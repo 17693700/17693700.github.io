@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>会员注册 - 一元云购-云购商城-一元夺宝！</title>
+    <link rel="stylesheet" type="text/css" href="css/sslcomm.css" />
+    <link rel="stylesheet" type="text/css" href="css/user.register.css" />
+
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/user.register.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="g-logo-top">
+            <a href="/" class="transparent-png fl">
+                <img src="picture/shop_logo.png"/></a>
+            <span class="fr">已有账号？<a id="hylinkLoginPage" class="blue" href="/user/login.do">立即登录</a></span>
+        </div>
+
+        <div class="g-contentCon clrfix">
+
+            <div class="m-main clrfix">
+                <h2 class="gray3">新用户注册</h2>
+                <div class="register-form-con clrfix">
+					<form id='form_login'>
+                    <ul>
+                        <li>
+                            <input name="username" type="text" maxlength="100" placeholder="手机号" />
+                            <b class="passport-icon user-name transparent-png"></b>
+                            <span class="orange" style="display: none;"></span>
+                        </li>
+                        <li>
+                            <input name="password" type="password" maxlength="20" placeholder="设置登录密码" />
+                            <b class="passport-icon login-password transparent-png"></b>
+                            <span class="orange" style="display: none;"></span>
+
+                        </li>
+                        <li>
+                            <input name="password2" type="password" maxlength="20" placeholder="确认密码" />
+                            <b class="passport-icon login-password transparent-png"></b>
+                            <span class="orange" style="display: none;"></span>
+                        </li>
+                        <li>
+                    	    <div class="z-code clrfix">
+                        	    <input name="code" type="text" maxlength="4" placeholder="验证码" style="text-transform:uppercase;" />
+                                <b class="passport-icon verification-code transparent-png"></b>
+								<img id="checkcode" _src="picture/web_user_register.do"/>
+                                <a href="javascript:;" id="btnChangeCode">换一张</a>
+                            </div>
+                            <span class="orange"></span>
+                        </li>
+                        <li id="btn_invited">
+							<strong>＞</strong>推荐人邀请码(<strong>选填</strong>)
+                        </li>
+                        <li id="div_invited">
+                            <input name="yaoqing" type="text" maxlength="20" placeholder="邀请人UID" value="" />
+                            <b class="passport-icon user-name transparent-png"></b>
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+                <div class="link-con clrfix">
+                    <a id="btnAgreeBtn" href="/user/activation.do?forward=%2Fhome.do" class="z-agreeBtn">同意协议并注册</a>
+                    <a id="btnAgreement" href="/help/agreement.html" target="_blank" class="z-agreement">《1元云购服务协议》</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="g-copyrightCon clrfix">
+        <div class="g-links">
+        </div>
+        <div class="g-copyright">
+            Copyright © 2014 - 2016, 云购商城 版权所有 
+<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备12039896号-5</a>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b683ac331274c68b37d23323bf1ecb9e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name="baidu-site-verification" content="9dtMsdkInW" />
+        </div>
+    </div>
+
+
+	<link type="text/css" rel="stylesheet" href="css/pagedialog.css" />
+<script language="javascript" type="text/javascript" src="js/pagedialog.js"></script>
+<div class="pageDialogBG" id="pageDialogBG"></div>
+<div class="pageDialogBorder" id="pageDialogBorder"></div>
+<div class="pageDialog" id="pageDialog">
+	<div class="pageDialogClose" id="pageDialogClose" title="关闭"></div>
+	<div class="pageDialogMain" id="pageDialogMain"> </div>
+</div>
+</div></body>
+</html>

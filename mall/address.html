@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>会员登录 - 一元云购-云购商城-一元夺宝！</title>
+    <link rel="stylesheet" type="text/css" href="css/sslcomm.css" />
+    <link rel="stylesheet" type="text/css" href="css/user.login.css" />
+
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/user.login.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+	  <div class="g-logo-top g-logo-width">
+		  <a href="/" class="transparent-png fl"><img src="picture/shop_logo.png"></a>
+		  <span class="fr"><a href="/">返回首页</a></span>
+	  </div>
+	  <input type="hidden" id="WxAppID" value="wxef3fcfb60762cac7" />
+	  <input type="hidden" id="state" value="dc1f095347928fd57b729a04d4a434c3" />
+        <div class="g-login-con clrfix" style="background:#5fd2a7 url(images/user_log.jpg) top center no-repeat;">
+            <div class="m-login-screen clrfix">
+                <div id="loadingPicBlock" class="screen-left fl"></div>
+                <div class="screen-right fr clrfix">
+                    <div class="login-panel" id="LoginForm">
+                        <dl>
+                            <dt>
+                                <em class="fl">登录</em>
+                                <a id="hylinkRegisterPage" tabindex="9" class="fr orange" href="/user/register.do?forward=%2Fhome.do">免费注册<i class="passport-icon"></i></a>
+                            </dt>
+                            <dd>
+                                <div class="register-form-con clrfix">
+									<form action="/user/login.do" id='form_login'>
+                                    <ul>
+                                        <li>
+                                            <input name="username" type="text" maxlength="100" tabindex="1" placeholder="手机号/邮箱地址" autocomplete="off" />
+                                            <b class="passport-icon user-name transparent-png"></b>
+                                        </li>
+                                        <li>
+                                            <input name="password" type="password" maxlength="20" tabindex="2" placeholder="密码" autocomplete="off" />
+                                            <b class="passport-icon login-password transparent-png"></b>
+                                        </li>
+                                        <li>
+                                            <input name="code" id="txtCode" type="text" maxlength="4" tabindex="3" placeholder="验证码" style="text-transform:uppercase;" />
+                                            <b class="passport-icon verification-code transparent-png"></b>
+											<img id="yzm_refresh" src2="/checkcode/login.do"/>
+                                        </li>
+                                    </ul>
+									</form>
+                                </div>
+                            </dd>
+                            <dd class="text-alignR">
+                                <a id="hylinkGetPassPage" tabindex="5" class="gray9" href="/user/findpassword.do?forward=%2Fhome.do">忘记密码？</a>
+                            </dd>
+                            <dd class="error-message orange" style="display: none;" id="dd_error_msg"></dd>
+                        </dl>
+                        <p><a id="btnSubmitLogin" href="/home.do" class="z-agreeBtn" tabindex="4">登录</a></p>
+                        <div class="other-login">
+                            <span>快捷登录：</span>
+                            <a href="/user/oauth.do?which=qq" class="qq-icon" tabindex="6" target="_blank"><b class="passport-icon transparent-png"></b></a>
+                            <a id="wechatoauth" class="wx-icon" tabindex="7" target="_blank"><b class="passport-icon transparent-png"></b></a>
+                            <a href="/user/oauth.do?which=sina" class="sina-icon" tabindex="8" target="_blank"><b class="passport-icon transparent-png"></b></a>
+                        </div>
+                    </div>
+					<div class="wx-login clrfix" id="wxLogin" style="display: none;">
+                        <h2 class="gray3">微信登录</h2>
+                        <p id="p_code"></p>
+                        <a id="a_return" href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="g-copyrightCon clrfix">
+        <div class="g-links">
+        </div>
+        <div class="g-copyright">
+            Copyright © 2014 - 2016, 云购商城 版权所有 
+<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备12039896号-5</a>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b683ac331274c68b37d23323bf1ecb9e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name="baidu-site-verification" content="9dtMsdkInW" />
+        </div>
+    </div>
+
+	<link type="text/css" rel="stylesheet" href="css/pagedialog.css" />
+<script language="javascript" type="text/javascript" src="js/pagedialog.js"></script>
+<div class="pageDialogBG" id="pageDialogBG"></div>
+<div class="pageDialogBorder" id="pageDialogBorder"></div>
+<div class="pageDialog" id="pageDialog">
+	<div class="pageDialogClose" id="pageDialogClose" title="关闭"></div>
+	<div class="pageDialogMain" id="pageDialogMain"> </div>
+</div>
+</div></body>
+</html>

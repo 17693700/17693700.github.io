@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="云购商城，一个有态度的商城。"/>
+    <meta name="keywords" content="云购商城"/>
+    <title>云购商城 - 有态度的商城</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/common.head.js"></script>
+</head>
+<body>
+<div class="g-header" module="header/Header">
+    <div class="m-toolbar" module="toolbar/Toolbar">
+        <div class="g-wrap f-clear">
+            <div class="m-toolbar-l f-clear">
+                <label class="m-toolbar-home ico-home"></label><a class="m-toolbar-welcome" href="javascript:void(0);">欢迎来到云购商城</a>
+            </div>
+            <ul class="m-toolbar-r">
+                <li id="pro-view-8-niackname" class="m-toolbar-login" style="display:none">
+					<div>
+						<a class="m-toolbar-nickname" href="/home.do" ></a>
+						<a class="m-toolbar-logout-btn" href="/user/logout.do">[ 退出 ]</a>
+					</div>
+				</li>
+                <li class="m-toolbar-myDuobao">
+					<a class="m-toolbar-login-btn"  type="login" href="/user/login.do" login-iframe="/user/login_iframe.do">请登录</a>
+					<a href="/user/register.do" type="register" target="_blank">免费注册</a>
+
+                    <a class="m-toolbar-myDuobao-btn" href="/home.do">个人中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-header">
+        <div class="g-wrap f-clear">
+            <div class="m-header-logo">
+                <h1><a class="m-header-logo-link" href="/">云购商城</a></h1>
+            </div>
+
+            <div class="w-miniCart" module="minicart/MiniCart">
+                <a href="/pay/cart.do"  class="w-miniCart-btn" ><i class="ico ico-cart-black"></i>购物车<span class="m-header-cart-point icon-point-warm" id="pro-view-11">0</span></a>
+            </div>
+			<script language="Javascript">
+
+			</script>
+            <div class="m-header-promotion">
+            </div>
+
+            <div class="m-header-search m-header-nopromotion">
+                <div class="w-search">
+                    <div class="w-search-form f-clear">
+						<form id="goods_search" action="/lists/search.do" method="get">
+						   <input name="key" class="w-input-input" id="txtHSearch" type="text" maxlength="100" placeholder="请输入要搜索的商品" value="">
+							<a class="w-search-btn" id="btnHSearch" href="javascript:void(0)"><i class="ico ico-search"></i></a>
+						</form>
+                    </div>
+                </div>
+                <ul class="w-quickSearch f-clear">
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E6%89%8B%E6%9C%BA" target="_blank"  style="color: #d32048;">手机</a>
+						<var>|</var>
+					</li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%94%B5%E8%84%91" target="_blank" >电脑</a><var>|</var></li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%A7%BB%E5%8A%A8%E7%94%B5%E6%BA%90" target="_blank" >移动电源</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="m-nav" module="nav/Nav">
+        <div class="g-wrap f-clear">
+            <ul class="m-nav-category f-clear">
+									<li class="m-nav-category-item m-nav-category-item-select">
+ 									<a href="/">首页</a>
+				</li>
+										 					 <li class="m-nav-category-item">
+				 					<a  href="/list/1-0-0-0.html">手机数码</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/2-0-0-0.html">电脑办公</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/3-0-0-0.html">家用电器</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/6-0-0-0.html">汽车配件</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/4-0-0-0.html">化妆个护</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/9-0-0-0.html">其他商品</a>
+				</li>
+            			
+            </ul>
+			<div class="m-nav-slogan">
+                <a href="/html/AppWeb.html" target="_blank">
+                    <i class="ico ico-duobao"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="css/goods.css" />
+	<div class="m-mallcart f-fadeInDown" id="pro-view-1" style="min-height: 672px;">
+		<div pro="cartlist"></div>
+		<div pro="offshelves"></div>
+		<div pro="footer"></div>
+		<div class="m-mallcart-empty" id="pro-view-6">
+			<div class="content">
+				 <p class="empty-txt">购物车内没有商品</p>
+				 <a class="empty-url" href="/" target="_blank" rel="noopener">立即逛逛&gt;&gt;</a>
+			</div>
+		</div>
+	</div>
+<div class="g-footer">
+    <div class="m-copyright" id="footerCopyright">
+        <div class="g-wrap">
+            <div class="m-copyright-txt ">
+                <p>Copyright © 2014 - 2016, 云购商城 版权所有 
+<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备12039896号-5</a>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b683ac331274c68b37d23323bf1ecb9e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name="baidu-site-verification" content="9dtMsdkInW" />
+</p>
+				<p>
+					<a href="/help/contactus.html" target="_blank">联系我们</a>
+					<a href="/help/statement.html" target="_blank">隐私声明</a>
+					<a href="/help/secure.html" target="_blank">安全支付</a>
+					<a href="/help/genuine.html" target="_blank">正品保障</a>
+					<a href="/links.do" target="_blank">友情链接</a>
+				</p>
+             </div>
+        </div>
+    </div>
+</div>
+
+<link type="text/css" rel="stylesheet" href="css/pagedialog.css" />
+<script language="javascript" type="text/javascript" src="js/pagedialog.js"></script>
+<div class="pageDialogBG" id="pageDialogBG"></div>
+<div class="pageDialogBorder" id="pageDialogBorder"></div>
+<div class="pageDialog" id="pageDialog">
+	<div class="pageDialogClose" id="pageDialogClose" title="关闭"></div>
+	<div class="pageDialogMain" id="pageDialogMain"> </div>
+</div>
+</div>
+</body>
+</html>

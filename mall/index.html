@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="云购商城，一个有态度的商城。"/>
+    <meta name="keywords" content="云购商城"/>
+    <title>云购商城 - 有态度的商城</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/jquery-1.12.1.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/common.head.js"></script>
+</head>
+<body>
+<div class="g-header" module="header/Header">
+    <div class="m-toolbar" module="toolbar/Toolbar">
+        <div class="g-wrap f-clear">
+            <div class="m-toolbar-l f-clear">
+                <label class="m-toolbar-home ico-home"></label><a class="m-toolbar-welcome" href="javascript:void(0);">欢迎来到云购商城</a>
+            </div>
+            <ul class="m-toolbar-r">
+                <li id="pro-view-8-niackname" class="m-toolbar-login" style="display:none">
+					<div>
+						<a class="m-toolbar-nickname" href="/home.do" ></a>
+						<a class="m-toolbar-logout-btn" href="/user/logout.do">[ 退出 ]</a>
+					</div>
+				</li>
+                <li class="m-toolbar-myDuobao">
+					<a class="m-toolbar-login-btn"  type="login" href="/user/login.do" login-iframe="/user/login_iframe.do">请登录</a>
+					<a href="/user/register.do" type="register" target="_blank">免费注册</a>
+
+                    <a class="m-toolbar-myDuobao-btn" href="/home.do">个人中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-header">
+        <div class="g-wrap f-clear">
+            <div class="m-header-logo">
+                <h1><a class="m-header-logo-link" href="/">云购商城</a></h1>
+            </div>
+
+            <div class="w-miniCart" module="minicart/MiniCart">
+                <a href="/pay/cart.do"  class="w-miniCart-btn" ><i class="ico ico-cart-black"></i>购物车<span class="m-header-cart-point icon-point-warm" id="pro-view-11">0</span></a>
+            </div>
+			<script language="Javascript">
+
+			</script>
+            <div class="m-header-promotion">
+            </div>
+
+            <div class="m-header-search m-header-nopromotion">
+                <div class="w-search">
+                    <div class="w-search-form f-clear">
+						<form id="goods_search" action="/lists/search.do" method="get">
+						   <input name="key" class="w-input-input" id="txtHSearch" type="text" maxlength="100" placeholder="请输入要搜索的商品" value="">
+							<a class="w-search-btn" id="btnHSearch" href="javascript:void(0)"><i class="ico ico-search"></i></a>
+						</form>
+                    </div>
+                </div>
+                <ul class="w-quickSearch f-clear">
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E6%89%8B%E6%9C%BA" target="_blank"  style="color: #d32048;">手机</a>
+						<var>|</var>
+					</li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%94%B5%E8%84%91" target="_blank" >电脑</a><var>|</var></li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%A7%BB%E5%8A%A8%E7%94%B5%E6%BA%90" target="_blank" >移动电源</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="m-nav" module="nav/Nav">
+        <div class="g-wrap f-clear">
+            <ul class="m-nav-category f-clear">
+									<li class="m-nav-category-item m-nav-category-item-select">
+ 									<a href="/">首页</a>
+				</li>
+										 					 <li class="m-nav-category-item">
+				 					<a  href="/list/1-0-0-0.html">手机数码</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/2-0-0-0.html">电脑办公</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/3-0-0-0.html">家用电器</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/6-0-0-0.html">汽车配件</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/4-0-0-0.html">化妆个护</a>
+				</li>
+            							 					 <li class="m-nav-category-item">
+				 					<a  href="/list/9-0-0-0.html">其他商品</a>
+				</li>
+            			
+            </ul>
+			<div class="m-nav-slogan">
+                <a href="/html/AppWeb.html" target="_blank">
+                    <i class="ico ico-duobao"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div><div class="g-body">
+    <div class="m-index" module="mall/index/Index">
+        <div class="m-index-promotion" id="indexPromotion">
+            <div class="w-fade">
+                <div class="w-fade-wrap" pro="wrap">
+                    <ul class="w-fade-wrap-list" pro="list">
+                        <li pro="item" class="w-fade-wrap-list-item" data-statistics="">
+                            <a href="javascript:;" title="" target="_blank" style="background-image: url(images/0-0.jpg); background-color: none;"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m-index-category">
+											<div class="g-wrap">
+					<div class="m-index-category-hd">
+						<h3 class="m-index-category-hd-title">手机数码</h3>
+						<a class="m-index-category-hd-more" href="/list/1-0-0-0.html"><span
+								style="vertical-align: middle;">查看全部</span><i class="ico"></i></a>
+				  </div>
+					<div class="m-index-goods-category f-clear">
+						<div class="m-index-category-promotion">
+							<a href="/list/1-0-0-0.html" target="_blank">
+																	<img src="picture/lists-1.png">
+															</a>
+						</div>
+						<ul class="m-index-category-goods f-clear">
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748899.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 128G版 4G手机">
+												<img src="picture/1zg40uuy_200.png" alt="苹果（Apple）iPhone 7 Plus 128G版 4G手机">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>7588</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748899.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 128G版 4G手机">苹果（Apple）iPhone 7 Plus 128G版 4G手机</a></div>
+										<div class="w-mall-goods-desc">5.5英寸显示屏，突破性的设计，精彩随处可见！（颜色随机发）</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748539.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 32G版 4G手机">
+												<img src="picture/1sqep1jo_200.jpg" alt="苹果（Apple）iPhone 7 Plus 32G版 4G手机">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>6788</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748539.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 32G版 4G手机">苹果（Apple）iPhone 7 Plus 32G版 4G手机</a></div>
+										<div class="w-mall-goods-desc">5.5英寸显示屏，在你手握 iPhone 的瞬间，你就会感觉一见如故！（颜色随机发）</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748841.html" target="_blank" title="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">
+												<img src="picture/1x02wscm_200.jpg" alt="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>6388</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748841.html" target="_blank" title="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">Apple iPhone 7 128G 红色特别版 移动联通电信4G手机</a></div>
+										<div class="w-mall-goods-desc"></div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748611.html" target="_blank" title="苹果（Apple）iPhone 7 128G版 4G手机">
+												<img src="picture/1zbkxb71_200.png" alt="苹果（Apple）iPhone 7 128G版 4G手机">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>6099</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748611.html" target="_blank" title="苹果（Apple）iPhone 7 128G版 4G手机">苹果（Apple）iPhone 7 128G版 4G手机</a></div>
+										<div class="w-mall-goods-desc">4.7英寸显示屏，突破性的设计， 又有新突破！（颜色随机发）</div>
+									</div>
+								</li>
+													</ul>
+					</div>
+				</div>
+											<div class="g-wrap">
+					<div class="m-index-category-hd">
+						<h3 class="m-index-category-hd-title">电脑办公</h3>
+						<a class="m-index-category-hd-more" href="/list/2-0-0-0.html"><span
+								style="vertical-align: middle;">查看全部</span><i class="ico"></i></a>
+				  </div>
+					<div class="m-index-goods-category f-clear">
+						<div class="m-index-category-promotion">
+							<a href="/list/2-0-0-0.html" target="_blank">
+																	<img src="picture/lists-2.png">
+															</a>
+						</div>
+						<ul class="m-index-category-goods f-clear">
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748831.html" target="_blank" title="惠普(HP)WASD 暗影精灵 15.6英寸游戏笔记本">
+												<img src="picture/1fkimblq_200.jpg" alt="惠普(HP)WASD 暗影精灵 15.6英寸游戏笔记本">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>6799</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748831.html" target="_blank" title="惠普(HP)WASD 暗影精灵 15.6英寸游戏笔记本">惠普(HP)WASD 暗影精灵 15.6英寸游戏笔记本</a></div>
+										<div class="w-mall-goods-desc">i7-6700HQ 8G 1TB+128G SSD GTX950M 4G独显 FHD IPS屏 Win10</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748830.html" target="_blank" title="苹果（Apple）iPad Pro 12.9 英寸平板电脑 128G WiFi版">
+												<img src="picture/bl14jte_200.jpg" alt="苹果（Apple）iPad Pro 12.9 英寸平板电脑 128G WiFi版">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>6288</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748830.html" target="_blank" title="苹果（Apple）iPad Pro 12.9 英寸平板电脑 128G WiFi版">苹果（Apple）iPad Pro 12.9 英寸平板电脑 128G WiFi版</a></div>
+										<div class="w-mall-goods-desc">（iPad Pro配件Smart Keyboard、Apple Pencil需另行购买）轻、薄，时尚典雅，大尺寸，大有可为！（颜色随机发）</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748207.html" target="_blank" title="联想（Lenovo）拯救者 ISK15.6英寸游戏本">
+												<img src="picture/1fbvr07y_200.jpg" alt="联想（Lenovo）拯救者 ISK15.6英寸游戏本">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>5699</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748207.html" target="_blank" title="联想（Lenovo）拯救者 ISK15.6英寸游戏本">联想（Lenovo）拯救者 ISK15.6英寸游戏本</a></div>
+										<div class="w-mall-goods-desc">i5-6300HQ 8G 1T HDD GTX960M 4G独显 FHD IPS屏 </div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748308.html" target="_blank" title="苹果（Apple）iPad Pro 12.9 英寸平板电脑 32G WiFi版">
+												<img src="picture/at7k8p5_200.jpg" alt="苹果（Apple）iPad Pro 12.9 英寸平板电脑 32G WiFi版">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>5399</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748308.html" target="_blank" title="苹果（Apple）iPad Pro 12.9 英寸平板电脑 32G WiFi版">苹果（Apple）iPad Pro 12.9 英寸平板电脑 32G WiFi版</a></div>
+										<div class="w-mall-goods-desc">（iPad Pro配件Smart Keyboard、Apple Pencil需另行购买）轻、薄、磅礴，看似简单，用起来却引人入胜！（颜色随机发）</div>
+									</div>
+								</li>
+													</ul>
+					</div>
+				</div>
+											<div class="g-wrap">
+					<div class="m-index-category-hd">
+						<h3 class="m-index-category-hd-title">家用电器</h3>
+						<a class="m-index-category-hd-more" href="/list/3-0-0-0.html"><span
+								style="vertical-align: middle;">查看全部</span><i class="ico"></i></a>
+				  </div>
+					<div class="m-index-goods-category f-clear">
+						<div class="m-index-category-promotion">
+							<a href="/list/3-0-0-0.html" target="_blank">
+																	<img src="picture/lists-3.png">
+															</a>
+						</div>
+						<ul class="m-index-category-goods f-clear">
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748794.html" target="_blank" title="大宇（DAEWOO）XQG30-888G 韩国进口小型壁挂式婴儿洗衣机 迷你全自动变频儿童宝宝内衣专用 香槟金">
+												<img src="picture/28s9b52u_200.jpg" alt="大宇（DAEWOO）XQG30-888G 韩国进口小型壁挂式婴儿洗衣机 迷你全自动变频儿童宝宝内衣专用 香槟金">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>3599</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748794.html" target="_blank" title="大宇（DAEWOO）XQG30-888G 韩国进口小型壁挂式婴儿洗衣机 迷你全自动变频儿童宝宝内衣专用 香槟金">大宇（DAEWOO）XQG30-888G 韩国进口小型壁挂式婴儿洗衣机 迷你全自动变频儿童宝宝内衣专用 香槟金</a></div>
+										<div class="w-mall-goods-desc">韩国原装进口，宝宝专用洗衣机，95°高温煮洗+15分钟快洗！</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748251.html" target="_blank" title="飞利浦（PHILIPS）空气净化器KJ250F-C02(AC4074)银灰色除甲醛">
+												<img src="picture/1xfb82nm_200.jpg" alt="飞利浦（PHILIPS）空气净化器KJ250F-C02(AC4074)银灰色除甲醛">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>2750</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748251.html" target="_blank" title="飞利浦（PHILIPS）空气净化器KJ250F-C02(AC4074)银灰色除甲醛">飞利浦（PHILIPS）空气净化器KJ250F-C02(AC4074)银灰色除甲醛</a></div>
+										<div class="w-mall-goods-desc"></div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3747075.html" target="_blank" title="飞利浦（PHILIPS）除螨仪FC6231/81小型手持式床铺">
+												<img src="picture/1fkeycre_200.jpg" alt="飞利浦（PHILIPS）除螨仪FC6231/81小型手持式床铺">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>968</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3747075.html" target="_blank" title="飞利浦（PHILIPS）除螨仪FC6231/81小型手持式床铺">飞利浦（PHILIPS）除螨仪FC6231/81小型手持式床铺</a></div>
+										<div class="w-mall-goods-desc"></div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3747793.html" target="_blank" title="美的（Midea）MYR827S-W 高端立式温热型 沸腾胆饮水机">
+												<img src="picture/1xalbtgn_200.jpg" alt="美的（Midea）MYR827S-W 高端立式温热型 沸腾胆饮水机">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>918</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3747793.html" target="_blank" title="美的（Midea）MYR827S-W 高端立式温热型 沸腾胆饮水机">美的（Midea）MYR827S-W 高端立式温热型 沸腾胆饮水机</a></div>
+										<div class="w-mall-goods-desc"></div>
+									</div>
+								</li>
+													</ul>
+					</div>
+				</div>
+											<div class="g-wrap">
+					<div class="m-index-category-hd">
+						<h3 class="m-index-category-hd-title">汽车配件</h3>
+						<a class="m-index-category-hd-more" href="/list/6-0-0-0.html"><span
+								style="vertical-align: middle;">查看全部</span><i class="ico"></i></a>
+				  </div>
+					<div class="m-index-goods-category f-clear">
+						<div class="m-index-category-promotion">
+							<a href="/list/6-0-0-0.html" target="_blank">
+																	<img src="picture/lists-4.png">
+															</a>
+						</div>
+						<ul class="m-index-category-goods f-clear">
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748622.html" target="_blank" title="天梭(TISSOT)手表 海星自动III系列机械男表T065.430.16.031.00">
+												<img src="picture/1ey6mewa_200.jpg" alt="天梭(TISSOT)手表 海星自动III系列机械男表T065.430.16.031.00">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>3199</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748622.html" target="_blank" title="天梭(TISSOT)手表 海星自动III系列机械男表T065.430.16.031.00">天梭(TISSOT)手表 海星自动III系列机械男表T065.430.16.031.00</a></div>
+										<div class="w-mall-goods-desc">双历显示，条字刻度，机械机芯，棕色皮质表带尽显男士高雅气质！</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748761.html" target="_blank" title="苹果（Apple）Apple Watch Sport 38毫米铝金属表壳搭配运动型表带">
+												<img src="picture/9sx5t3q_200.jpg" alt="苹果（Apple）Apple Watch Sport 38毫米铝金属表壳搭配运动型表带">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>2388</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748761.html" target="_blank" title="苹果（Apple）Apple Watch Sport 38毫米铝金属表壳搭配运动型表带">苹果（Apple）Apple Watch Sport 38毫米铝金属表壳搭配运动型表带</a></div>
+										<div class="w-mall-goods-desc">Apple Pay来了，刷表支付超方便！（颜色随机发）</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748755.html" target="_blank" title="中国黄金 薄片财富金条 Au9999 2g">
+												<img src="picture/1xfkk0t1_200.jpg" alt="中国黄金 薄片财富金条 Au9999 2g">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>666</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748755.html" target="_blank" title="中国黄金 薄片财富金条 Au9999 2g">中国黄金 薄片财富金条 Au9999 2g</a></div>
+										<div class="w-mall-goods-desc">央企出品，成色标准，工艺非凡，品质保障！</div>
+									</div>
+								</li>
+															<li class="m-index-category-goods-item">
+									<div class="w-mall-goods">
+										<div class="w-mall-goods-pic">
+											<a href="/goods/3748878.html" target="_blank" title="施华洛世奇项链">
+												<img src="picture/2kuyiflg_200.jpg" alt="施华洛世奇项链">
+											</a>
+										</div>
+										<div class="w-mall-goods-price">
+											<span class="w-mall-goods-price-discount"><span class="w-mall-goods-price-discount-unit">￥</span>598</span>
+										</div>
+										<div class="w-mall-goods-name"><a href="/goods/3748878.html" target="_blank" title="施华洛世奇项链">施华洛世奇项链</a></div>
+										<div class="w-mall-goods-desc"></div>
+									</div>
+								</li>
+													</ul>
+					</div>
+				</div>
+			
+
+        </div>
+    </div>
+</div>
+
+
+<div class="g-footer">
+    <div class="m-copyright" id="footerCopyright">
+        <div class="g-wrap">
+            <div class="m-copyright-txt ">
+                <p>Copyright © 2014 - 2016, 云购商城 版权所有 
+<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备12039896号-5</a>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b683ac331274c68b37d23323bf1ecb9e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta name="baidu-site-verification" content="9dtMsdkInW" />
+</p>
+				<p>
+					<a href="/help/contactus.html" target="_blank">联系我们</a>
+					<a href="/help/statement.html" target="_blank">隐私声明</a>
+					<a href="/help/secure.html" target="_blank">安全支付</a>
+					<a href="/help/genuine.html" target="_blank">正品保障</a>
+					<a href="/links.do" target="_blank">友情链接</a>
+				</p>
+             </div>
+        </div>
+    </div>
+</div>
+
+<link type="text/css" rel="stylesheet" href="css/pagedialog.css" />
+<script language="javascript" type="text/javascript" src="js/pagedialog.js"></script>
+<div class="pageDialogBG" id="pageDialogBG"></div>
+<div class="pageDialogBorder" id="pageDialogBorder"></div>
+<div class="pageDialog" id="pageDialog">
+	<div class="pageDialogClose" id="pageDialogClose" title="关闭"></div>
+	<div class="pageDialogMain" id="pageDialogMain"> </div>
+</div>
+</div>
+</body>
+</html>
