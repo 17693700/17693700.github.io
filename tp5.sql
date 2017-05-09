@@ -1,54 +1,47 @@
--- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: 2017-05-08 09:49:26
--- 服务器版本： 5.6.17
--- PHP Version: 5.5.12
+/*
+Navicat MySQL Data Transfer
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : tp5
 
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+Date: 2017-05-09 18:18:20
+*/
 
---
--- Database: `tp5`
---
-CREATE DATABASE IF NOT EXISTS `tp5` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE `tp5`;
+SET FOREIGN_KEY_CHECKS=0;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `t_goods_catalog`
---
-
-CREATE TABLE IF NOT EXISTS `t_goods_catalog` (
+-- ----------------------------
+-- Table structure for t_goods_catalog
+-- ----------------------------
+DROP TABLE IF EXISTS `t_goods_catalog`;
+CREATE TABLE `t_goods_catalog` (
   `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_name` varchar(55) COLLATE utf8mb4_unicode_ci NOT NULL,
   `parent_id` int(11) NOT NULL,
   `path` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `level` int(2) NOT NULL,
   PRIMARY KEY (`cat_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- 转存表中的数据 `t_goods_catalog`
---
-
-INSERT INTO `t_goods_catalog` (`cat_id`, `cat_name`, `parent_id`, `path`, `level`) VALUES
-(1, '手机数码', 0, '0,1', 1),
-(2, '电脑办公', 0, '0,1', 1),
-(3, '家用电器', 0, '0,1', 1),
-(4, '汽车配件', 0, '0,1', 1),
-(5, '化妆个护', 0, '0,1', 1),
-(6, '其他商品', 0, '0,1', 1);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ----------------------------
+-- Records of t_goods_catalog
+-- ----------------------------
+INSERT INTO `t_goods_catalog` VALUES ('1', '手机数码', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('2', '电脑办公', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('3', '家用电器', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('4', '汽车配件', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('5', '化妆个护', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('6', '其他商品', '0', '0,1', '1');
+INSERT INTO `t_goods_catalog` VALUES ('7', '苹果', '1', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('8', '小米', '1', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('9', '主机', '2', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('10', '显示器', '2', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('11', '鼠标', '2', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('12', '键盘', '2', '', '2');
+INSERT INTO `t_goods_catalog` VALUES ('14', 'iphone7', '7', '', '3');
+INSERT INTO `t_goods_catalog` VALUES ('15', 'iphone6s', '7', '', '3');
