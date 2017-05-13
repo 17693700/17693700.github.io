@@ -8,12 +8,77 @@ class Product extends Controller
 {
     public function product_category()
     {
+        $m = Db::name('t_goods_catalog');
+        $data=$m->select();
+
+        $new_data = array();
+        
+        foreach($data as $key=>$val){
+            $str = '';
+
+            if($val['level'] > 1){
+                for($i=1;$i<$val['level'];$i++){
+                    $str .= '—';
+                }
+
+                $val['cat_name'] = $str.$val['cat_name'];
+            }
+
+            $new_data[$key] = $val;
+        }
+
+        $this->assign('data',$new_data);
 
         return $this->fetch();
     }
 
+    public function product_category_del(){
+        $cat_id = $_POST['cat_id'];
+
+        $m = Db::name('t_goods_catalog');
+        $data = $m->where('parent_id='.$cat_id)->find();
+
+        if($data){
+            echo "该分类下面有子分类，不允许删除";
+        }else{
+            $res = $m->delete($cat_id);
+            if($res){
+                echo 1;
+            }
+        }
+    }
+
+    //获取分类数据
+    public function product_category_ajax()
+    {
+        $m = Db::name('t_goods_catalog');
+        $data=$m->field('cat_id,path,cat_name')->select();
+
+        echo json_encode($data);
+    }
+
     public function product_add()
     {
+        $m = Db::name('t_goods_catalog');
+        $data=$m->select();
+
+        $new_data = array();
+        
+        foreach($data as $key=>$val){
+            $str = '';
+
+            if($val['level'] > 1){
+                for($i=1;$i<$val['level'];$i++){
+                    $str .= '—';
+                }
+
+                $val['cat_name'] = $str.$val['cat_name'];
+            }
+
+            $new_data[$key] = $val;
+        }
+
+        $this->assign('data',$new_data);
 
         return $this->fetch();
     }
@@ -50,10 +115,55 @@ class Product extends Controller
     }
 
     public function product_list()
-    {
+    {   
+        $m = Db::name('t_goods_catalog');
+        $data=$m->select();
+
+        $new_data = array();
+        
+        foreach($data as $key=>$val){
+            $str = '';
+
+            if($val['level'] > 1){
+                for($i=1;$i<$val['level'];$i++){
+                    $str .= '—';
+                }
+
+                $val['cat_name'] = $str.$val['cat_name'];
+            }
+
+            $new_data[$key] = $val;
+        }
+
+        $this->assign('data',$new_data);
+        
         return $this->fetch();
     }
 
+    public function goods_add(){
+        $data = array();
+        $data['goods_name'] = input('goods_name');
+        $data['cat_id'] = input('cat_id');
+        $data['order_id'] = input('order_id');
+        $data['price'] = input('price');
+        $data['service'] = input('service');
+        $data['summary'] = input('summary');
+        $data['content'] = input('editorValue');
+        $data['thumbnail'] = '';
+        $data['popularity'] = 0;
+        $data['sales'] = 0;
+        $data['addtime'] = date('Y-m-d h:i:s');
+
+        $m = Db::name('t_goods_thread');
+        $res = $m->insert($data);
+
+        if($res){
+            $this->success('添加商品成功！','product_add','',2);
+        }else{
+            $this->error('添加失败！','product_add','',2);
+        }
+
+    }
 
     public function category_add(){
         $data               = array();
