@@ -136,6 +136,10 @@ class Product extends Controller
         }
 
         $this->assign('data',$new_data);
+
+        $m2 = Db::name('t_goods_thread');
+        $goods = $m2->select();
+        $this->assign('goods',$goods);
         
         return $this->fetch();
     }
@@ -184,10 +188,73 @@ class Product extends Controller
             }
         }else{
             echo "<script>alert('添加失败，内容不能为空！');parent.location.href='product_category'</script>";
+        } 
+    }
+
+    public function product_edit(){
+        $goods_id = input('goods_id');
+        $cat_id = input('cat_id');
+
+        $db = Db::name('t_goods_thread');
+        $goods = $db->find($goods_id);
+
+        $this->assign('goods',$goods);
+        $this->assign('cat_id',$cat_id);
+
+
+        $m = Db::name('t_goods_catalog');
+        $data=$m->select();
+
+        $new_data = array();
+        
+        foreach($data as $key=>$val){
+            $str = '';
+
+            if($val['level'] > 1){
+                for($i=1;$i<$val['level'];$i++){
+                    $str .= '—';
+                }
+
+                $val['cat_name'] = $str.$val['cat_name'];
+            }
+
+            $new_data[$key] = $val;
         }
+
+        $this->assign('data',$new_data);
+
+
+        return $this->fetch();
+    }
+
+    public function goods_edit(){
+        $goods_id = input('goods_id');
         
-        
+        $data = array();
+        $data['goods_name'] = input('goods_name');
+        $data['cat_id'] = input('cat_id');
+        $data['order_id'] = input('order_id');
+        $data['price'] = input('price');
+        $data['service'] = input('service');
+        $data['summary'] = input('summary');
+        $data['content'] = input('editorValue');
+        $data['thumbnail'] = '';
+        $data['popularity'] = 0;
+        $data['sales'] = 0;
+        $data['addtime'] = date('Y-m-d h:i:s');
+
+        $m = Db::name('t_goods_thread');
+        $res = $m->where("goods_id=".$goods_id)->update($data);
+
+        if($res){
+            $this->success('修改商品成功！','product_list','',2);
+        }else{
+            $this->error('修改失败！','product_list','',2);
+        }
 
     }
+
+
+
    
 }
