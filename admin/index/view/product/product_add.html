@@ -75,7 +75,7 @@
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
 			</div>
 		</div>
-		<div class="row cl">
+		<!--div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<div class="uploader-thum-container">
@@ -84,7 +84,7 @@
 					<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
 				</div>
 			</div>
-		</div>
+		</div-->
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">图片上传：</label>
 			<div class="formControls col-xs-8 col-sm-9">
@@ -92,7 +92,7 @@
 					<div class="queueList">
 						<div id="dndArea" class="placeholder">
 							<div id="filePicker-2"></div>
-							<p>或将照片拖到这里，单次最多可选300张</p>
+							<p>或将照片拖到这里，最多可选5张</p>
 						</div>
 					</div>
 					<div class="statusBar" style="display:none;">
@@ -152,10 +152,10 @@ $(function(){
 
 	var uploader = WebUploader.create({
 		auto: true,
-		swf: 'lib/webuploader/0.1.5/Uploader.swf',
+		swf: '/static/admin/lib/webuploader/0.1.5/Uploader.swf',
 	
 		// 文件接收服务端。
-		server: 'lib/webuploader/0.1.5/server/fileupload.php',
+		server: '/static/admin/lib/webuploader/0.1.5/server/fileupload.php',
 	
 		// 选择文件的按钮。可选。
 		// 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -396,10 +396,11 @@ $(function(){
             },
             dnd: '#dndArea',
             paste: '#uploader',
-            swf: 'lib/webuploader/0.1.5/Uploader.swf',
+            swf: '/static/admin/lib/webuploader/0.1.5/Uploader.swf',
             chunked: false,
             chunkSize: 512 * 1024,
-            server: 'lib/webuploader/0.1.5/server/fileupload.php',
+            //server: '/static/admin/lib/webuploader/0.1.5/server/fileupload.php',
+            server: "{:url('Index/index/goods_images_add')}",
             // runtimeOrder: 'flash',
 
             // accept: {
@@ -509,7 +510,7 @@ $(function(){
                         img = $('<img src="'+src+'">');
                         $wrap.empty().append( img );
                     } else {
-                        $.ajax('lib/webuploader/0.1.5/server/preview.php', {
+                        $.ajax('/static/admin/lib/webuploader/0.1.5/server/preview.php', {
                             method: 'POST',
                             data: src,
                             dataType:'json'
