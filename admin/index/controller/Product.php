@@ -4,7 +4,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Db;
 
-class Product extends Controller
+class Product extends Common
 {
     public function product_category()
     {
@@ -146,6 +146,17 @@ class Product extends Controller
 
     public function goods_add(){
         $data = array();
+
+        //处理上传的图片
+        $file = request()->file('image');
+        $info = $file->move(ROOT_PATH.'public'.DS.'uploads');
+
+        if($info){
+            $data['image'] = $info->getSaveName();
+        }else{
+            echo $info->getError();
+        }
+
         $data['goods_name'] = input('goods_name');
         $data['cat_id'] = input('cat_id');
         $data['order_id'] = input('order_id');
@@ -153,7 +164,6 @@ class Product extends Controller
         $data['service'] = input('service');
         $data['summary'] = input('summary');
         $data['content'] = input('editorValue');
-        $data['thumbnail'] = '';
         $data['popularity'] = 0;
         $data['sales'] = 0;
         $data['addtime'] = date('Y-m-d h:i:s');
@@ -228,9 +238,24 @@ class Product extends Controller
     }
 
     public function goods_edit(){
-        $goods_id = input('goods_id');
         
+
         $data = array();
+
+        //处理上传的图片
+        $file = request()->file('image');
+        $info = $file->move(ROOT_PATH.'public'.DS.'uploads');
+
+        
+
+        if($info){
+            $data['image'] = $info->getSaveName();
+        }else{
+            echo $info->getError();
+        }
+
+        $goods_id = input('goods_id');
+
         $data['goods_name'] = input('goods_name');
         $data['cat_id'] = input('cat_id');
         $data['order_id'] = input('order_id');
@@ -238,7 +263,6 @@ class Product extends Controller
         $data['service'] = input('service');
         $data['summary'] = input('summary');
         $data['content'] = input('editorValue');
-        $data['thumbnail'] = '';
         $data['popularity'] = 0;
         $data['sales'] = 0;
         $data['addtime'] = date('Y-m-d h:i:s');

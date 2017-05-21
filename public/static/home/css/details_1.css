@@ -1,0 +1,246 @@
+﻿.m-detail-mall {
+}
+
+.m-detail-mall-main {
+    font-size: 14px;
+    color: #333333;
+}
+
+.m-detail-mall-main-item-hd {
+    padding-left: 20px;
+    padding-right: 30px;
+    float: left;
+}
+.m-detail-main-count-number{
+    float: left;
+}
+.m-detail-mall-value {
+    height: 60px;
+    line-height: 60px;
+    background-color: #fafafa;
+}
+
+.m-detail-mall-discount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32048;
+}
+
+.m-detail-mall-price {
+    padding-left: 15px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.m-detail-mall-promotion {
+    background-color: #fafafa;
+    padding-bottom: 15px;
+}
+
+.m-detail-mall-promotion .m-detail-mall-main-item-hd {
+    display: block;
+    float: left;
+}
+
+.m-detail-mall-promotion-list {
+    float: left;
+    width: 640px;
+    padding-top: 4px;
+}
+
+.m-detail-mall-promotion-item {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.m-detail-mall-promotion-item a {
+    text-decoration: none;
+}
+
+.m-detail-mall-promotion-item-desc {
+    line-height: 18px;
+    padding: 0 4px;
+}
+
+.m-detail-mall-promotion-item-desc {
+    color: #333333;
+}
+
+.m-detail-mall-promotion-item-desc strong {
+    margin: 0 4px;
+    padding: 0 4px;
+    font-weight: normal;
+    color: #ffffff;
+    background-color: #ed9aa8;
+    border-radius: 2px;
+}
+
+.m-detail-mall-promotion-item-desc br {
+    display: none;
+}
+
+.m-detail-mall-service {
+    height: 50px;
+    line-height: 50px;
+}
+
+.m-detail-mall-service-item {
+}
+
+.m-detail-mall-service-separator {
+}
+
+.m-detail-mall-number {
+    overflow: hidden;
+    line-height: 32px;
+}
+
+.m-detail-mall-number-input {
+}
+
+.m-detail-mall-stock {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #f60;
+}
+
+.m-detail-mall-buy {
+    position: relative;
+}
+
+.m-detail-mall-buy .w-button {
+    width: 180px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #f60;
+}
+
+.m-detail-mall-buy .w-button-transparent {
+    background-color: transparent;
+    width: 178px;
+    height: 48px;
+    line-height: 48px;
+    color: #f60;
+    border: 1px solid #f60;
+}
+
+.m-detail-mall-buy-disable .w-button {
+    background-color: #cccccc;
+}
+
+.m-detail-mall-buy-disable .w-button-transparent {
+    border-color: #ccc;
+    color: #fff;
+}
+
+.m-detail-mall-buy-tip {
+    position: absolute;
+    top: 32px;
+    left: 493px;
+    font-size: 14px;
+    color: #f60;
+}
+
+.m-detail-mall-activity {
+    height: 45px;
+    line-height: 45px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.m-detail-mall-flash {
+}
+
+.m-detail-mall-flash-ready {
+    background-color: #ed9aa8;
+}
+
+.m-detail-mall-flash-ongoing {
+    background-color: #f60;
+}
+
+.m-detail-mall-flash-disable {
+    background-color: #cccccc;
+}
+
+.m-detail-mall-flash-title {
+    height: 24px;
+    margin-left: 20px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #f60;
+    line-height: 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.m-detail-mall-flash-tip {
+    padding-left: 10px;
+}
+
+.m-detail-mall-flash-tip strong {
+    font-weight: bold;
+    color: #ffff00;
+}
+
+.m-detail-mall-flash-countdown {
+    color: #ffff00;
+}
+
+.m-detail-mall-flash-countdown-num {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.m-detail-mall-flash-countdown-unit {
+    font-size: 14px;
+}
+
+.m-detail-mall-flash-more {
+    float: right;
+    padding-right: 18px;
+    color: #ffffff;
+}
+
+.m-detail-mall-buy-tip {
+    position: absolute;
+    top: 32px;
+    left: 493px;
+    font-size: 14px;
+    color: #f60;
+}
+
+.m-detail-mall-buy .mWeaken {
+    background-color: #FAFAFA;
+    color: #f60;
+    border: #CCCCCC 1px solid
+}
+
+.m-detail-mall-buy .mCartTips {
+    background-color: #333333;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    padding: 0 10px;
+    margin-top: 20px;
+    vertical-align: middle;
+    border-radius: 4px
+}
+
+.m-detail-mall-buy .w-button-addToCart {
+    margin: 20px 20px 0 20px
+}
+
+.m-detail-mall-buy-disable #mallBtnAddToCart {
+    display: none;
+}
+
+.m-detail-mall-buy-disable .m-detail-mall-buy-tip {
+    left: 257px;
+}
