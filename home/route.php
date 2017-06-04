@@ -8,6 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
+
+//设置商品列表路由
+Route::rule('lists/:id','index/Index/lists');
 
 return [
     '__pattern__' => [
@@ -17,5 +21,6 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
+
 
 ];

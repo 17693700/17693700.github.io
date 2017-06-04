@@ -1,0 +1,80 @@
+<div class="g-header" module="header/Header">
+    <div class="m-toolbar" module="toolbar/Toolbar">
+        <div class="g-wrap f-clear">
+            <div class="m-toolbar-l f-clear">
+                <label class="m-toolbar-home ico-home"></label><a class="m-toolbar-welcome" href="javascript:void(0);">欢迎来到云购商城</a>
+            </div>
+            <ul class="m-toolbar-r">
+                <li id="pro-view-8-niackname" class="m-toolbar-login" style="display:none">
+					<div>
+						<a class="m-toolbar-nickname" href="/home.do" ></a>
+						<a class="m-toolbar-logout-btn" href="/user/logout.do">[ 退出 ]</a>
+					</div>
+				</li>
+                <li class="m-toolbar-myDuobao">
+					<a class="m-toolbar-login-btn"  type="login" href="/user/login.do" login-iframe="/user/login_iframe.do">请登录</a>
+					<a href="/user/register.do" type="register" target="_blank">免费注册</a>
+
+                    <a class="m-toolbar-myDuobao-btn" href="/home.do">个人中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="m-header">
+        <div class="g-wrap f-clear">
+            <div class="m-header-logo">
+                <h1><a class="m-header-logo-link" href="/">云购商城</a></h1>
+            </div>
+
+            <div class="w-miniCart" module="minicart/MiniCart">
+                <a href="/pay/cart.do"  class="w-miniCart-btn" ><i class="ico ico-cart-black"></i>购物车<span class="m-header-cart-point icon-point-warm" id="pro-view-11">0</span></a>
+            </div>
+			<script language="Javascript">
+
+			</script>
+            <div class="m-header-promotion">
+            </div>
+
+            <div class="m-header-search m-header-nopromotion">
+                <div class="w-search">
+                    <div class="w-search-form f-clear">
+						<form id="goods_search" action="/lists/search.do" method="get">
+						   <input name="key" class="w-input-input" id="txtHSearch" type="text" maxlength="100" placeholder="请输入要搜索的商品" value="">
+							<a class="w-search-btn" id="btnHSearch" href="javascript:void(0)"><i class="ico ico-search"></i></a>
+						</form>
+                    </div>
+                </div>
+                <ul class="w-quickSearch f-clear">
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E6%89%8B%E6%9C%BA" target="_blank"  style="color: #d32048;">手机</a>
+						<var>|</var>
+					</li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%94%B5%E8%84%91" target="_blank" >电脑</a><var>|</var></li>
+                    <li class="w-quickSearch-entry">
+						<a href="/lists/search.do?key=%E7%A7%BB%E5%8A%A8%E7%94%B5%E6%BA%90" target="_blank" >移动电源</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="m-nav" module="nav/Nav">
+        <div class="g-wrap f-clear">
+            <ul class="m-nav-category f-clear">
+				<li class="m-nav-category-item m-nav-category-item-select">
+ 					<a href="/">首页</a>
+				</li>  	
+                {foreach $catalog as $val}
+                <li class="m-nav-category-item">
+                    <a href="{:url('/lists/'.$val.cat_id,'','')}">{$val.cat_name}</a>
+                </li>
+                {/foreach}						
+            </ul>
+			<div class="m-nav-slogan">
+                <a href="/html/AppWeb.html" target="_blank">
+                    <i class="ico ico-duobao"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

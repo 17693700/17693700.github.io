@@ -14,100 +14,10 @@
 	<script src="/static/home/js/common.head.js"></script>
 </head>
 <body>
-<div class="g-header" module="header/Header">
-    <div class="m-toolbar" module="toolbar/Toolbar">
-        <div class="g-wrap f-clear">
-            <div class="m-toolbar-l f-clear">
-                <label class="m-toolbar-home ico-home"></label><a class="m-toolbar-welcome" href="javascript:void(0);">欢迎来到云购商城</a>
-            </div>
-            <ul class="m-toolbar-r">
-                <li id="pro-view-8-niackname" class="m-toolbar-login" style="display:none">
-					<div>
-						<a class="m-toolbar-nickname" href="/home.do" ></a>
-						<a class="m-toolbar-logout-btn" href="/user/logout.do">[ 退出 ]</a>
-					</div>
-				</li>
-                <li class="m-toolbar-myDuobao">
-					<a class="m-toolbar-login-btn"  type="login" href="/user/login.do" login-iframe="/user/login_iframe.do">请登录</a>
-					<a href="/user/register.do" type="register" target="_blank">免费注册</a>
 
-                    <a class="m-toolbar-myDuobao-btn" href="/home.do">个人中心</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="m-header">
-        <div class="g-wrap f-clear">
-            <div class="m-header-logo">
-                <h1><a class="m-header-logo-link" href="/">云购商城</a></h1>
-            </div>
+{include file="Index/head"}
 
-            <div class="w-miniCart" module="minicart/MiniCart">
-                <a href="/pay/cart.do"  class="w-miniCart-btn" ><i class="ico ico-cart-black"></i>购物车<span class="m-header-cart-point icon-point-warm" id="pro-view-11">0</span></a>
-            </div>
-			<script language="Javascript">
-
-			</script>
-            <div class="m-header-promotion">
-            </div>
-
-            <div class="m-header-search m-header-nopromotion">
-                <div class="w-search">
-                    <div class="w-search-form f-clear">
-						<form id="goods_search" action="/lists/search.do" method="get">
-						   <input name="key" class="w-input-input" id="txtHSearch" type="text" maxlength="100" placeholder="请输入要搜索的商品" value="iph">
-							<a class="w-search-btn" id="btnHSearch" href="javascript:void(0)"><i class="ico ico-search"></i></a>
-						</form>
-                    </div>
-                </div>
-                <ul class="w-quickSearch f-clear">
-                    <li class="w-quickSearch-entry">
-						<a href="/lists/search.do?key=%E6%89%8B%E6%9C%BA" target="_blank"  style="color: #d32048;">手机</a>
-						<var>|</var>
-					</li>
-                    <li class="w-quickSearch-entry">
-						<a href="/lists/search.do?key=%E7%94%B5%E8%84%91" target="_blank" >电脑</a><var>|</var></li>
-                    <li class="w-quickSearch-entry">
-						<a href="/lists/search.do?key=%E7%A7%BB%E5%8A%A8%E7%94%B5%E6%BA%90" target="_blank" >移动电源</a>
-					</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="m-nav" module="nav/Nav">
-        <div class="g-wrap f-clear">
-            <ul class="m-nav-category f-clear">
-									<li class="m-nav-category-item m-nav-category-item-select">
- 									<a href="/">首页</a>
-				</li>
-										 					 <li class="m-nav-category-item">
-				 					<a  href="/list/1-0-0-0.html">手机数码</a>
-				</li>
-            							 					 <li class="m-nav-category-item">
-				 					<a  href="/list/2-0-0-0.html">电脑办公</a>
-				</li>
-            							 					 <li class="m-nav-category-item">
-				 					<a  href="/list/3-0-0-0.html">家用电器</a>
-				</li>
-            							 					 <li class="m-nav-category-item">
-				 					<a  href="/list/6-0-0-0.html">汽车配件</a>
-				</li>
-            							 					 <li class="m-nav-category-item">
-				 					<a  href="/list/4-0-0-0.html">化妆个护</a>
-				</li>
-            							 					 <li class="m-nav-category-item">
-				 					<a  href="/list/9-0-0-0.html">其他商品</a>
-				</li>
-            			
-            </ul>
-			<div class="m-nav-slogan">
-                <a href="/html/AppWeb.html" target="_blank">
-                    <i class="ico ico-duobao"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div><link rel="stylesheet" type="text/css" href="/static/home/css/content.css"/>
+<link rel="stylesheet" type="text/css" href="/static/home/css/content.css"/>
 <link rel="stylesheet" type="text/css" href="/static/home/css/search.css"/>
 <div class="g-body">
         <div class="g-wrap">
@@ -131,262 +41,28 @@
                 </div>
             </div>
             <ul class="m-list-goods f-clear">
-												<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748611.html" target="_blank" title="苹果（Apple）iPhone 7 128G版 4G手机">
-									<img src="/static/home/picture/1zbkxb71_200.png" alt="苹果（Apple）iPhone 7 128G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>6099								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748611.html" target="_blank" title="苹果（Apple）iPhone 7 128G版 4G手机">苹果（Apple）iPhone 7 128G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">4.7英寸显示屏，突破性的设计， 又有新突破！（颜色随机发）</div>
+
+				{foreach $goods as $val}
+				<li class="m-list-goods-item">
+					<div class="w-mall-goods">
+						<div class="w-mall-goods-pic">
+							<a href="/index.php/index/index/article?id={$val.goods_id}" target="_blank" title="{$val.goods_name}">
+								<img src="/uploads/{$val.image}" width="200" height="200" alt="{$val.goods_name}">
+							</a>
 						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748841.html" target="_blank" title="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">
-									<img src="/static/home/picture/1x02wscm_200.jpg" alt="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>6388								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748841.html" target="_blank" title="Apple iPhone 7 128G 红色特别版 移动联通电信4G手机">Apple iPhone 7 128G 红色特别版 移动联通电信4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc"></div>
+						<div class="w-mall-goods-price">
+							<span class="w-mall-goods-price-discount">
+								<span class="w-mall-goods-price-discount-unit">￥</span>{$val.price}								</span>
 						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748614.html" target="_blank" title="苹果（Apple）iPhone 6s 64G版 4G手机">
-									<img src="/static/home/picture/2qqagqbe_200.png" alt="苹果（Apple）iPhone 6s 64G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>4988								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748614.html" target="_blank" title="苹果（Apple）iPhone 6s 64G版 4G手机">苹果（Apple）iPhone 6s 64G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">具备 3D Touch 技术的 Retina HD 显示屏，用与众不同的手机，体验与众不同！（颜色随机发）</div>
+						<div class="w-mall-goods-name">
+							<a href="/index.php/index/index/article?id={$val.goods_id}" target="_blank" title="{$val.goods_name}">{$val.goods_name}</a>
 						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748870.html" target="_blank" title="苹果（Apple）iPhone 6 A1586 64G版 4G手机">
-									<img src="/static/home/picture/2ppo9uhx_200.jpg" alt="苹果（Apple）iPhone 6 A1586 64G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>4299								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748870.html" target="_blank" title="苹果（Apple）iPhone 6 A1586 64G版 4G手机">苹果（Apple）iPhone 6 A1586 64G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">4.7 英寸LED 背光宽，Retina HD 高清显示屏，Multi-Touch 显示屏，具有 IPS 技术，1334 x 750 像素分辨率，是 iPhone 的至大之作！</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748899.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 128G版 4G手机">
-									<img src="/static/home/picture/1zg40uuy_200.png" alt="苹果（Apple）iPhone 7 Plus 128G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>7588								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748899.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 128G版 4G手机">苹果（Apple）iPhone 7 Plus 128G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5英寸显示屏，突破性的设计，精彩随处可见！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748388.html" target="_blank" title="苹果（Apple）iPhone 6s Plus 64G版 4G手机">
-									<img src="/static/home/picture/2t9w71v5_200.png" alt="苹果（Apple）iPhone 6s Plus 64G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>5888								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748388.html" target="_blank" title="苹果（Apple）iPhone 6s Plus 64G版 4G手机">苹果（Apple）iPhone 6s Plus 64G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5英寸Retina HD显示屏，3D Touch，突破性的设计，又有新突破！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748671.html" target="_blank" title="苹果（Apple）iPhone 6s Plus 16G版 4G手机">
-									<img src="/static/home/picture/2u5ctri0_200.png" alt="苹果（Apple）iPhone 6s Plus 16G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>4888								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748671.html" target="_blank" title="苹果（Apple）iPhone 6s Plus 16G版 4G手机">苹果（Apple）iPhone 6s Plus 16G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5英寸Retina HD显示，指尖一按， 3D Touch就能让你实现更多精彩！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748770.html" target="_blank" title="苹果（Apple）iPhone 7 32G版 4G手机">
-									<img src="/static/home/picture/1jkfeq0h_200.jpg" alt="苹果（Apple）iPhone 7 32G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>5299								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748770.html" target="_blank" title="苹果（Apple）iPhone 7 32G版 4G手机">苹果（Apple）iPhone 7 32G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">4.7英寸显示屏，突破性的设计，用与众不同的手机，体验与众不同！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748534.html" target="_blank" title="苹果（Apple）iPhone 6s 16G版 4G手机">
-									<img src="/static/home/picture/2mfexld9_200.jpg" alt="苹果（Apple）iPhone 6s 16G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>3888								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748534.html" target="_blank" title="苹果（Apple）iPhone 6s 16G版 4G手机">苹果（Apple）iPhone 6s 16G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">唯一的不同，是处处都不同！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748539.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 32G版 4G手机">
-									<img src="/static/home/picture/1sqep1jo_200.jpg" alt="苹果（Apple）iPhone 7 Plus 32G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>6788								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748539.html" target="_blank" title="苹果（Apple）iPhone 7 Plus 32G版 4G手机">苹果（Apple）iPhone 7 Plus 32G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5英寸显示屏，在你手握 iPhone 的瞬间，你就会感觉一见如故！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748795.html" target="_blank" title="苹果（Apple）iPhone 6 Plus A1524 64G版">
-									<img src="/static/home/picture/2q1euj41_200.jpg" alt="苹果（Apple）iPhone 6 Plus A1524 64G版">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>5199								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748795.html" target="_blank" title="苹果（Apple）iPhone 6 Plus A1524 64G版">苹果（Apple）iPhone 6 Plus A1524 64G版</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5 英寸 LED 背光宽，Retina HD 高清显示屏，1920 x 1080 像素分辨率，Multi-Touch 显示屏，具有 IPS 技术，不仅更大，更大放异彩！</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748542.html" target="_blank" title="苹果（Apple）iPhone 6 A1586 16G版 4G手机">
-									<img src="/static/home/picture/2oy6ssh0_200.jpg" alt="苹果（Apple）iPhone 6 A1586 16G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>3888								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748542.html" target="_blank" title="苹果（Apple）iPhone 6 A1586 16G版 4G手机">苹果（Apple）iPhone 6 A1586 16G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">4.7 英寸LED 背光宽，Retina HD 高清显示屏，Multi-Touch 显示屏，具有 IPS 技术 ，1334 x 750 像素分辨率，是 iPhone 新一代的至大之作，也是至薄之作！</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748565.html" target="_blank" title="苹果（Apple）iPhone SE 16G版 4G手机">
-									<img src="/static/home/picture/1oc7p5ko_200.jpg" alt="苹果（Apple）iPhone SE 16G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>2899								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748565.html" target="_blank" title="苹果（Apple）iPhone SE 16G版 4G手机">苹果（Apple）iPhone SE 16G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">迄今最高性能的 4 英寸 iPhone，一小部的一大步！（颜色随机发）</div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748826.html" target="_blank" title="苹果iPhone6s Plus/6 Plus手机壳/保护套 硅胶透明防摔软壳 初色零感系列 ">
-									<img src="/static/home/picture/1gdlgk3z_200.jpg" alt="苹果iPhone6s Plus/6 Plus手机壳/保护套 硅胶透明防摔软壳 初色零感系列 ">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>49								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748826.html" target="_blank" title="苹果iPhone6s Plus/6 Plus手机壳/保护套 硅胶透明防摔软壳 初色零感系列 ">苹果iPhone6s Plus/6 Plus手机壳/保护套 硅胶透明防摔软壳 初色零感系列 </a>
-							</div>
-							<div class="w-mall-goods-desc"></div>
-						</div>
-					</li>
-									<li class="m-list-goods-item">
-						<div class="w-mall-goods">
-							<div class="w-mall-goods-pic">
-								<a href="/goods/3748590.html" target="_blank" title="苹果（Apple）iPhone 6 Plus A1524 16G版 4G手机">
-									<img src="/static/home/picture/2pva1o5o_200.jpg" alt="苹果（Apple）iPhone 6 Plus A1524 16G版 4G手机">
-								</a>
-							</div>
-							<div class="w-mall-goods-price">
-								<span class="w-mall-goods-price-discount">
-									<span class="w-mall-goods-price-discount-unit">￥</span>4299								</span>
-							</div>
-							<div class="w-mall-goods-name">
-								<a href="/goods/3748590.html" target="_blank" title="苹果（Apple）iPhone 6 Plus A1524 16G版 4G手机">苹果（Apple）iPhone 6 Plus A1524 16G版 4G手机</a>
-							</div>
-							<div class="w-mall-goods-desc">5.5 英寸 LED 背光宽，Retina HD 高清显示屏，Multi-Touch 显示屏，具有 IPS 技术，1920 x 1080 像素分辨率，比更大还更大！</div>
-						</div>
-					</li>
-							            </ul>
+						<div class="w-mall-goods-desc">{$val.summary}</div>
+					</div>
+				</li>
+				{/foreach}
+									
+			</ul>
         </div>
     </div>
 </div>
